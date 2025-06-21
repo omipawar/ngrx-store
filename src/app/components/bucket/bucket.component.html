@@ -1,0 +1,13 @@
+<div class="bucket-container">
+  <h1>My Bucket</h1>
+  <ul class="bucket-list">
+    @for(item of myBucket$ | async; track item.id){
+        <li class="bucket-item">{{item.name}} x {{item.quantity}}</li>
+    }@empty {
+      No items in bucket...
+    }
+  </ul>
+</div>
+
+<!-- <h6>Subject-{{count$ | async}}</h6>
+<h6>Behaviour Subject-{{behaviourCount$ | async}}</h6> -->
